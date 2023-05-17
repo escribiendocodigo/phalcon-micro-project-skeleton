@@ -11,8 +11,9 @@ define('APP_PATH', BASE_PATH . '/app');
 
 try {
     /**
-     * The FactoryDefault Dependency Injector automatically registers the services that
-     * provide a full stack framework. These default services can be overidden with custom ones.
+     * The FactoryDefault Dependency Injector automatically registers
+     * the services that provide a full stack framework.
+     * These default services can be overidden with custom ones.
      */
     $di = new FactoryDefault();
 
@@ -47,6 +48,6 @@ try {
      */
     $app->handle($_SERVER['REQUEST_URI']);
 } catch (\Exception $e) {
-      echo $e->getMessage() . '<br>';
-      echo '<pre>' . $e->getTraceAsString() . '</pre>';
+    echo $e->getMessage() . '<br>';
+    echo '<pre>' . $e->getTraceAsString() . '</pre>';
 }
